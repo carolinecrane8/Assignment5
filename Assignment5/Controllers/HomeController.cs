@@ -20,6 +20,7 @@ namespace Assignment5.Controllers
             _repository = repository;
         }
 
+        //This is the Index view function that will check if model state is valid
         public IActionResult Index()
         {
             if (ModelState.IsValid)
