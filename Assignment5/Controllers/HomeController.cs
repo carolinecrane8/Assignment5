@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-
+//home controller. our favorite page where idk what the heck is happening 65% of the time. She is useful though. we can return the view of the repository here 
 namespace Assignment5.Controllers
 {
     public class HomeController : Controller

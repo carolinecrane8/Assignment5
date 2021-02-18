@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-
+//this is the bookstore model where I set the field requirements. it also is where i set up the get/set of pulling data.
 namespace Assignment5.Models
 {
     public class Bookstore

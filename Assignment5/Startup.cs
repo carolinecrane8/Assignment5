@@ -10,7 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+//the startup page - directs the endpoints and very important
 namespace Assignment5
 {
     public class Startup

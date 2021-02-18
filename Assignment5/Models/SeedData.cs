@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+//this is the seed data file where I set all of the information for my database. it is part of the model first idea of program building
 namespace Assignment5.Models
 {
     public class SeedData
@@ -30,7 +30,7 @@ namespace Assignment5.Models
                         AuthorMiddle = "",
                         AuthorLast = " Hugo",
                         Publisher = "Signet",
-                        ISBN = "978-045141943",
+                        ISBN = "978-0451419439",
                         Category = "Classic",
                         Classification = "Fiction",
                         Price = 9.95
