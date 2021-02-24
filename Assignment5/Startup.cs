@@ -19,8 +19,8 @@ namespace Assignment5
         {
             Configuration = configuration;
         }
-
-        public IConfiguration Configuration { get; }
+        //IF I EVER RUN INTO AN ISSUE LOOK AT THIS LINE OF CODE!!
+        private IConfiguration Configuration { get; set; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -57,8 +57,12 @@ namespace Assignment5
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                   "pagination",
+                   "/P{page}",
+                   //"Bookstores/{page}",
+                   new { Controller = "Home", action = "Index" });
+
+                endpoints.MapDefaultControllerRoute();
             });
 
             SeedData.EnsurePopulated(app);

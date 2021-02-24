@@ -2,34 +2,40 @@
     ViewData["Title"] = "Home Page";
 }
 <!--This is the view for the homepage.  We loop through each iteration of the data entered in the database.-->
-@model IQueryable<Bookstore>
-<!DOCTYPE html>
-<html>
-<head>
-    
-        <title>These are some books</title>
-        <meta name="viewport" content="width=device-width"/>
-</head>
-<body>
-    
-    <br />
-    <br />
-    @foreach (var x in Model)
-    {
-        <div class="card card-outline-primary m-1 p-1">
-            <div class=“bg-faded p-1">
-                <h3>@x.Title</h3>
-                <bold><h5>@x.AuthorFirst  @x.AuthorLast  @x.AuthorMiddle </h5></bold>
-                <h5>@x.Publisher</h5>
+@model ProjectListViewModel
 
-                <p>@x.ISBN</p>
-                <p>@x.Category</p>
-                <p>@x.Classification</p>
-                <span class=“badge badge-pill badge-primary” style=“float:right”>
-                    <small>@x.Price.ToString("c")</small>
-                </span>
+<br />
+<br />
+<!--.Bookstores?-->
+
+@foreach (var x in Model.Bookstores)
+{<!--making little drop down thingies-->
+    <div class="container, text-left">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#@x.BookId">@x.Title</a>
+                    </h4>
+                </div>
+                <div id="@x.BookId" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>Author: @x.AuthorFirst @x.AuthorMiddle  @x.AuthorLast</p>
+                        <p>Publisher: @x.Publisher</p>
+                        <p>ISBN: @x.ISBN</p>
+                        <p>Classification: @x.Classification</p>
+                        <p>Category: @x.Category</p>
+                        <p>Price: @x.Price</p>
+                        <p>Page number: @x.PageNum</p>
+                    </div>
+
+                </div>
             </div>
         </div>
-    }
-</body>
-</html>
+    </div>
+                    
+}
+
+
+
+    <div page-model="@Model.PagingInfo" page-action="Index" page-classes-enables="true" page-class="btn" page-class-normal="btn-outline-dark" page-class-selected="btn-primary" class="btn-group pull-right m-1"></div>

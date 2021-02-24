@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Assignment5.Models.ViewModels;
 //home controller. our favorite page where idk what the heck is happening 65% of the time. She is useful though. we can return the view of the repository here 
 namespace Assignment5.Controllers
 {
@@ -14,6 +15,7 @@ namespace Assignment5.Controllers
         private readonly ILogger<HomeController> _logger;
 
         private IBookstoreRepository _repository;
+        public int PageSize = 5;
         public HomeController(ILogger<HomeController> logger, IBookstoreRepository repository)
         {
             _logger = logger;
@@ -21,14 +23,25 @@ namespace Assignment5.Controllers
         }
 
 
-        public IActionResult Index()
+        public IActionResult Index(int page = 1)
         {
-            if (ModelState.IsValid)
-            {
-                return View(_repository.Bookstores);
-            }
 
-            return View();
+            return View(new ProjectListViewModel
+            {
+                Bookstores = _repository.Bookstores
+                 .OrderBy(p => p.BookId)
+                 .Skip((page - 1) * PageSize)
+                 .Take(PageSize)
+                 ,
+                PagingInfo = new PagingInfo
+                {
+                    CurrentPage = page,
+                    ItemsPerPage = PageSize,
+                    TotalNumItems = _repository.Bookstores.Count()
+
+                }
+            }) ;
+    
         }
 
         public IActionResult Privacy()

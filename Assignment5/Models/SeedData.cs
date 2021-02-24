@@ -33,7 +33,8 @@ namespace Assignment5.Models
                         ISBN = "978-0451419439",
                         Category = "Classic",
                         Classification = "Fiction",
-                        Price = 9.95
+                        Price = 9.95,
+                        PageNum = 1488
                     },
 
                     new Bookstore
@@ -47,7 +48,8 @@ namespace Assignment5.Models
                         ISBN = "978-0743270755",
                         Category = "Biography",
                         Classification = "Non-Fiction",
-                        Price = 14.58
+                        Price = 14.58,
+                        PageNum = 944
                     },
 
                     new Bookstore
@@ -61,7 +63,8 @@ namespace Assignment5.Models
                         ISBN = "978-0553384611",
                         Category = "Biography",
                         Classification = "Non-Fiction",
-                        Price = 21.54
+                        Price = 21.54,
+                        PageNum = 832
                     },
 
                     new Bookstore
@@ -75,7 +78,8 @@ namespace Assignment5.Models
                         ISBN = "978-0812981254",
                         Category = "Biography",
                         Classification = "Non-Fiction",
-                        Price = 11.61
+                        Price = 11.61,
+                        PageNum = 864
                     },
 
                     new Bookstore
@@ -89,7 +93,8 @@ namespace Assignment5.Models
                         ISBN = "978-0812974492",
                         Category = "Historical",
                         Classification = "Non-Fiction",
-                        Price = 13.33
+                        Price = 13.33,
+                        PageNum = 528
                     },
 
                     new Bookstore
@@ -103,7 +108,8 @@ namespace Assignment5.Models
                         ISBN = "978-0804171281",
                         Category = "Historical Fiction",
                         Classification = "Fiction",
-                        Price = 15.95
+                        Price = 15.95,
+                        PageNum = 288
                     },
 
                     new Bookstore
@@ -117,7 +123,8 @@ namespace Assignment5.Models
                         ISBN = "978-1455586691",
                         Category = "Self-Help",
                         Classification = "Non-Fiction",
-                        Price = 14.99
+                        Price = 14.99,
+                        PageNum = 304
                     },
 
                     new Bookstore
@@ -131,7 +138,8 @@ namespace Assignment5.Models
                         ISBN = "978-1455523023",
                         Category = "Self-Help",
                         Classification = "Non -Fiction",
-                        Price = 21.66
+                        Price = 21.66,
+                        PageNum = 240
                     },
 
                     new Bookstore
@@ -145,7 +153,9 @@ namespace Assignment5.Models
                         ISBN = "978-1591847984",
                         Category = "Business",
                         Classification = "Non-Fiction",
-                        Price = 29.16
+                        Price = 29.16,
+                        PageNum = 400
+
                     },
 
 
@@ -160,8 +170,52 @@ namespace Assignment5.Models
                         ISBN = "978-0553393613",
                         Category = "Thrillers",
                         Classification = "Fiction",
-                        Price = 15.03
-                    }
+                        Price = 15.03,
+                        PageNum = 642
+                    },
+
+                     new Bookstore
+                     {
+                         //BookId = 11,
+                         Title = "Little Women",
+                         AuthorFirst = "Lousia ",
+                         AuthorMiddle = "May",
+                         AuthorLast = " Alcott",
+                         Publisher = "Roberts Brothers",
+                         ISBN = "978-1503280298",
+                         Category = "Comedy",
+                         Classification = "Fiction",
+                         Price = 11.83,
+                         PageNum = 759
+                     },
+                      new Bookstore
+                      {
+                          //BookId = 12,
+                          Title = "Princess Academy",
+                          AuthorFirst = "Shannon",
+                          AuthorMiddle = "",
+                          AuthorLast = " Hale",
+                          Publisher = "Bloomsbury Press",
+                          ISBN = "978-1599900735",
+                          Category = "Fantasy",
+                          Classification = "Fiction",
+                          Price = 8.99,
+                          PageNum = 314
+                      },
+                       new Bookstore
+                       {
+                           //BookId = 13,
+                           Title = "The Help",
+                           AuthorFirst = "Kathryn",
+                           AuthorMiddle = "",
+                           AuthorLast = " Stockett",
+                           Publisher = "Penguin Books",
+                           ISBN = "978-0425232200",
+                           Category = "Historical",
+                           Classification = "Fiction",
+                           Price = 11.99,
+                           PageNum = 524
+                       }
 
 
                    ) ;
