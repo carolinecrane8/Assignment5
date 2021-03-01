@@ -1,0 +1,26 @@
+﻿@Model Bookstore
+
+<div class="container, text-left">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#@Model.BookId">@Model.Title</a>
+                </h4>
+            </div>
+            <div id="@Model.BookId" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>Author: @Model.AuthorFirst @Model.AuthorMiddle  @Model.AuthorLast</p>
+                    <p>Publisher: @Model.Publisher</p>
+                    <p>ISBN: @Model.ISBN</p>
+                    <p>Classification: @Model.Classification</p>
+                    <p>Category: @Model.Category</p>
+                    <p>Price: @Model.Price</p>
+                    <p>Page number: @Model.PageNum</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
