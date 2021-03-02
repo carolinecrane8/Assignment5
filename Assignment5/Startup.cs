@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 //the startup page - directs the endpoints and very important
+//Hi Miles 
 namespace Assignment5
 {
     public class Startup
@@ -53,7 +54,7 @@ namespace Assignment5
             app.UseRouting();
 
             app.UseAuthorization();
-
+            //below is where all the routing happens
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute("catpage",

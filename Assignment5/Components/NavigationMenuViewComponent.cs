@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+//this is how we loop through all the categories
 namespace Assignment5.Components
 {
     public class NavigationMenuViewComponent : ViewComponent
