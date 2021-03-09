@@ -1,4 +1,4 @@
-﻿
+﻿@model Bookstore
 <!--This page is the partial page that is used to display all the cute drop downs-->
 <div class="container, text-left">
     <div class="panel-group">
@@ -18,7 +18,16 @@
                     <p>Price: @Model.Price</p>
                     <p>Page number: @Model.PageNum</p>
                 </div>
-
+                <form id="@Model.BookId" asp-page="/Purchase" method="post">
+                    <input type="hidden" asp-for="BookId"/>
+                    <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()"/>
+                    <span class="card-text p-1">
+                        @Model.Title
+                        <button type="submit" class="btn-success btn-sm pull-right" style="float:right">
+                            Purchase
+                        </button>
+                    </span>
+                </form>
             </div>
         </div>
     </div>

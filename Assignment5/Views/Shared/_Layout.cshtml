@@ -10,15 +10,27 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="/lib/font-awesome/css/all.min.css" rel="stylesheet"/>
 </head>
 
 <body>
     
     <!--Here is my nav bar stuff.  woohoo-->
 
-    <nav class="navbar navbar-dark bg-primary">
-        <a class="navbar-brand">Welcome To My Bookstore</a>
-    </nav>
+    <div class="bg-dark text-white p-2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col navbar-brand">
+                      BOOKSTORE
+                </div>
+                <div class="col-6 text-right">
+                    <vc:cart-summary/>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 
     <div class="row m-1 p-1">
         <div id="blah" class="col-3">
