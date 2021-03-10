@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+//in this model we create the cart.
 namespace Assignment5.Models
 {
     public class Cart

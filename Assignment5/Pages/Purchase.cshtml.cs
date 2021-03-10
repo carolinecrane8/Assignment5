@@ -6,7 +6,7 @@ using Assignment5.Infrastructure;
 using Assignment5.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-
+//this is the page where we have the info to remove 
 namespace Assignment5.Pages
 {
     public class PurchaseModel : PageModel
@@ -29,17 +29,17 @@ namespace Assignment5.Pages
         {
             ReturnUrl = ReturnUrl ?? "/";
             //what does this line do?
-            Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
+            //Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
         }
 
         public IActionResult OnPost(long bookId, string returnUrl)
         {
             Bookstore bookstore = repository.Bookstores.FirstOrDefault(p => p.BookId == bookId);
 
-            Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
+            //Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
             Cart.AddItem(bookstore, 1);
 
-            HttpContext.Session.SetJson("cart", Cart);
+            //HttpContext.Session.SetJson("cart", Cart);
 
             return RedirectToPage(new { returnUrl = returnUrl });
         }

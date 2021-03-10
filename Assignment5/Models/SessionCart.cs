@@ -6,7 +6,7 @@ using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Assignment5.Infrastructure;
-
+//this page deals with our cart and building that
 namespace Assignment5.Models
 {
     public class SessionCart : Cart
